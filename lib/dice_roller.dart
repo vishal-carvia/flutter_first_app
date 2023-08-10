@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
-var activeDiceImage = 'assets/images/dice-2.png';
+final randomizer = Random();
 
 class DiceRoller extends StatefulWidget {
   const DiceRoller({super.key});
@@ -16,9 +17,10 @@ class DiceRoller extends StatefulWidget {
 // var _color = "";
 
 class _DiceRollerState extends State<DiceRoller> {
+  var currentDiceRoll = randomizer.nextInt(6) + 1;
   void rollDice() {
     setState(() {
-      activeDiceImage = 'assets/images/dice-4.png';
+      currentDiceRoll = Random().nextInt(6) + 1;
     });
   }
 
@@ -28,7 +30,7 @@ class _DiceRollerState extends State<DiceRoller> {
       mainAxisSize: MainAxisSize.min,
       children: [
         Image.asset(
-          activeDiceImage,
+          'assets/images/dice-$currentDiceRoll.png',
           width: 200,
         ),
         // SizedBox is a widget which can create a box of specified size.
