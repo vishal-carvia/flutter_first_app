@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 
 var activeDiceImage = 'assets/images/dice-2.png';
 
-void rollDice() {
-  activeDiceImage = 'assets/images/dice-4.png';
-}
-
 class DiceRoller extends StatefulWidget {
   const DiceRoller({super.key});
 
@@ -20,6 +16,12 @@ class DiceRoller extends StatefulWidget {
 // var _color = "";
 
 class _DiceRollerState extends State<DiceRoller> {
+  void rollDice() {
+    setState(() {
+      activeDiceImage = 'assets/images/dice-4.png';
+    });
+  }
+
   @override
   Widget build(context) {
     return Column(
