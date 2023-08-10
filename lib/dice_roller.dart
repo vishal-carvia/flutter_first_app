@@ -20,7 +20,6 @@ class DiceRoller extends StatefulWidget {
 // var _color = "";
 
 class _DiceRollerState extends State<DiceRoller> {
-  
   @override
   Widget build(context) {
     return Column(
