@@ -14,11 +14,11 @@ class GradientContainer extends StatelessWidget {
   // calling a constructor like this,
   // here, we can also place this.colorList outside curly braces as positional argument.
   // Then we wouldn't need required keyword.
-  const GradientContainer({key1, required this.colorList}) : super(key: key1);
+  // const GradientContainer({key1, required this.colorList}) : super(key: key1);
 
   // or, we can send it directly
   // It will accept the named argument key and pass it to super under the same name.
-  // const GradientContainer({super.key}); (Not conventional)
+  const GradientContainer({super.key, required this.colorList});
 
   // named constructor in dart
 
